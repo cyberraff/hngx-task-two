@@ -11,6 +11,10 @@ const createUser = async (req, res) => {
 		country: user.country,
 	});
 };
+const getAllUsers = async (req, res) => {
+	const users = await User.find();
+	res.status(StatusCodes.OK).json({ users });
+};
 const getUser = async (req, res, next) => {
 	const { id: userId } = req.params;
 	const user = await User.findOne({ _id: userId });
@@ -48,6 +52,7 @@ const deleteUser = async (req, res) => {
 };
 
 module.exports = {
+	getAllUsers,
 	createUser,
 	getUser,
 	updateUser,
