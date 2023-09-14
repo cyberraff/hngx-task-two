@@ -50,10 +50,8 @@ Create User
 
 ```json
 {
-  "firstName": "UserFirstName",
-  "lastName": "UserLastName",
-  "city": "userCity",
-  "country": "userCountry"
+  "name": "Jane Doe",
+
 }
 ```
 
@@ -66,10 +64,8 @@ Response (Success):
 ```json
 {
     "userId": "6501c8938087c75d6c4bb9a4",
-  "firstName": "UserFirstName",
-  "lastName": "UserLastName",
-  "city": "userCity",
-  "country": "userCountry"
+  "name": "Jane Doe",
+
 }
 ```
 
@@ -88,16 +84,12 @@ Response (Success):
 {
  "users":[
     {
-        "firstName": "UserFirstName",
-        "lastName": "UserLastName",
-        "city": "userCity",
-        "country": "userCountry"
+         "userId": "6501c8938087c75d6c4bb9a4",
+  "name": "Jane Doe",
     },
     {
-        "firstName": "UserFirstName",
-        "lastName": "UserLastName",
-        "city": "userCity",
-       "country": "userCountry"
+        "userId": "6501c8938087c75d6c4bb9d6",
+  "name": "John Doe",
     }
  ]
 }
@@ -111,12 +103,15 @@ Copy code
 **Endpoint:** PUT /api/{id}
 
 **Headers:**
+
 - Content-Type: application/json
 
 **Body:**
+
 ```json
+
 {
-  "firstName": "newUserFirstName"
+  "name": "Jane Doener"
 }
 ``````
 
@@ -124,12 +119,14 @@ Response (Success):
 
 **Status Code:** 200 OK
 
+- Content-Type: application/json
+
 **Body:**
+
 ```json
+
 {
-    "firstName": "newUserFirstName",
-    "lastName": "UserLastName",
-    "city": "userCity",
-    "country": "userCountry"
+    "userId": "6501c8938087c75d6c4bb9a4",
+    "name": "Jane Doe",
 }
 ``````
