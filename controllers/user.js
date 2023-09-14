@@ -5,10 +5,7 @@ const createUser = async (req, res) => {
 	const user = await User.create({ ...req.body });
 	res.status(StatusCodes.OK).json({
 		userId: user._id,
-		firstName: user.firstName,
-		lastName: user.lastName,
-		city: user.city,
-		country: user.country,
+		name: user.name,
 	});
 };
 const getAllUsers = async (req, res) => {
